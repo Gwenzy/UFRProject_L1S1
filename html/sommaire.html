@@ -10,26 +10,51 @@
     <link rel="stylesheet" type="text/css" href="../styles/classes.css" />
     <link rel="stylesheet" type="text/css" href="../styles/ids.css" />
 </head>
-<body>
-<body onload="minisommaire();">
+<body onload="header();">
 <div id="header">
 
 </div>
     <h1>Sommaire du site</h1>
 
-    <div id="sommaireList" class="section">
-        <h2>Sommaire</h2>
-        <p>
-            Ici, vous pouvez accéder à l'ensemble des pages du site :
-            <ul>
-                <li><a href="index.html">Retour à l'index</a></li>
-                <li><a href="inscription.html">Inscription au tournoi</a></li>
-                <li><a href="bestplayers.html">Classement des meilleurs joueurs</a></li>
-                <li><a href="skinsandmaps.html">Petite liste de skins et de beatmaps</a></li>
-            </ul>
-        </p>
-    </div>
+<div id="sommaireList1" class="section">
+    <h2>Liens vers le site</h2>
+    <p>
+        Ici, vous pouvez acc&eacute;der &agrave; l'ensemble des pages du site :
 
+    </p>
+    <ul>
+        <li><button onclick="redirect('index.html')">Retour &agrave; l'index</button></li>
+        <li><button onclick="redirect('inscription.html')">Inscription au tournoi</button></li>
+        <li><button onclick="redirect('bestplayers.html')">Classement des meilleurs joueurs</button></li>
+        <li><button onclick="redirect('beatmaps.html')">Liste des beatmaps les plus jou&eacute;es</button></li>
+    </ul>
+</div>
+<div id="sommaireList2" class="section">
+    <h2>Liens externes utiles</h2>
+    <p>
+        Ici, vous pouvez acc&eacute;der &agrave; l'ensemble des pages du site :
+    </p>
+    <ul>
+        <li><button onclick="redirect('https://osu.ppy.sh/')">Site officiel</button></li>
+        <li><button onclick="redirect('https://discord.gg/9trAWrE')">Discord de la communaut&eacute; Osu!France</button></li>
+        <li><button onclick="redirect('https://osu.ppy.sh/forum/')">Acc&egrave;s au forum officiel</button></li>
+    </ul>
+</div>
+<div id="sommaireList3" class="section">
+    <h2>Cr&eacute;dits</h2>
+    <p>
+        Voici l'ensemble des remerciements : Nekodex (Musique) - Peppy (D&eacute;veloppeur du jeu)
+
+    </p>
+    <ul>
+    <li><a href="https://nekodex.net/"><img src="../media/nekodex.png" alt="Thank you Nekodex"/> </a></li>
+        <li><a href="https://ppy.sh/"><img src="../media/peppy.png" alt="Thank you Peppy" /> </a> </li>
+        <li></li>
+    </ul>
+
+
+
+</div>
 <script type="text/javascript" src="../javascript/global.js"></script>
 </body>
 </html>

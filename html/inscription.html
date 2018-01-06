@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription au tournoi</title>
+    <link rel="stylesheet" type="text/css" href="../styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/classes.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/ids.css" />
+</head>
+<body onload="header();">
+<div id="header">
+
+</div>
+<h1>Inscription au tournoi</h1>
+
+<div id="presTournoi" class="section">
+     <h2>Pr&eacute;sentation du tournoi</h2>
+
+    <p>
+        Ce tournoi s'adresse aux joueurs Osu!Standard de tous les niveaux et se d&eacute;roulement le week-end du 20 Janvier 2018. Les beatmaps du tournoi seront tir&eacute;es au sort le week-end du 13 et seront mises &agrave; disposition sur le site &agrave; ce moment.<br />
+        Si apr&egrave;s votre inscription, vous souhaitez vous d&eacute;sinscrire, merci de contacter un organisateur du tournoi. <br/>
+        Parmi les r&eacute;compenses, nous mettons en jeu un Osu!Supporter qui vous donnera acc&egrave;s &agrave; toutes les beatmaps disponibles directement depuis le jeu, sans avoir &agrave; passer par le site officiel, et de nombreux goodies
+    </p>
+
+</div>
+<div id="inscTournoi" class="section">
+    <h2>Formulaire d'inscription</h2>
+    <form action="mailto:gwendal-lottin@hotmail.fr" method="post">
+        <label class="formElement" for="pseudo">Nom d'utilisateur Osu! :  </label><input onkeydown="disableSumbit();" type="text" placeholder="Pseudo In Game" name="pseudo" id="pseudo" /><br />
+        <label class="formElement" for="pp">Votre nombre de PP :  </label><input onkeydown="disableSumbit();" type="number" min="0" max="10000" placeholder="Nombre PP" name="pp" id="pp" /><br />
+        <label class="formElement" for="password">Mot de passe (en cas de d&eacute;sinscription) :  </label><input onkeydown="disableSumbit();" type="password" placeholder="Mot de passe (diff&eacute;rent de votre mot de passe osu)" name="password" id="password" /><br />
+        <label class="formElement" for="mail">Adresse mail :  </label><input onkeydown="disableSumbit();" type="email" placeholder="Adresse email de contact" name="mail" id="mail" /><br />
+        <label class="formElement" for="tel">T&eacute;l&eacute;phone :  </label><input onkeydown="disableSumbit();" type="tel" placeholder="T&eacute;l&eacute;phone" name="tel" id="tel" /><br />
+        <label class="formElement">Quel type de joueur &ecirc;tes vous ?</label><br />
+        <input onchange="disableSumbit();" type="radio" name="style" value="casual" id="casual" checked> <label for="casual"> Joueur occasionnel</label><br/>
+        <input onchange="disableSumbit();" type="radio" name="style" value="regular" id="regular"> <label for="regular"> Joueur r&eacute;gulier </label><br/>
+        <input onchange="disableSumbit();" type="radio" name="style" value="tryharder" id="tryharder"> <label for="tryharder"> Joueur intensif</label><br/>
+        <label class="formElement">Quel est/sont votre/vos style(s) de jeu ?</label><br />
+        <input onchange="disableSumbit();" type="checkbox" name="gameStyle" value="mouseOnly" id="mouseOnly"><label for="mouseOnly">Souris uniquement</label> <br />
+        <input onchange="disableSumbit();" type="checkbox" name="gameStyle" value="mouseKeyboard" id="mouseKeyboard"><label for="mouseKeyboard">Souris/Clavier</label> <br />
+        <input onchange="disableSumbit();" type="checkbox" name="gameStyle" value="tabletKeyboard" id="tabletKeyboard"><label for="tabletKeyboard">Tablette graphique/Clavier</label> <br />
+        <input onchange="disableSumbit();" type="checkbox" name="gameStyle" value="touchscreen" id="touchscreen"><label for="touchscreen">&Eacute;cran tactile</label> <br />
+        <input onchange="disableSumbit();" type="checkbox" name="gameStyle" value="other" id="other"><label for="other">Autres</label> <br />
+        <label for="color">Couleur souhait&eacute;e dans le tournoi : </label><input type="color" name="color" id="color" value="#000000" /><br />
+        <input type="button" value="V&eacute;rification" class="formButton" onclick="verif();"/>
+        <input type="reset" value="Reset" class="formButton" onclick="disableSumbit();"/>
+        <input type="submit" disabled="disabled" onclick="submitted();" class="formButton" value="Envoyer" id="submit"/>
+    </form>
+
+    <div id="error"></div>
+</div>
+
+<script type="text/javascript" src="../javascript/global.js"></script>
+<script type="text/javascript" src="../javascript/inscription.js"></script>
+</body>
+</html>

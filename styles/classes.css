@@ -11,9 +11,26 @@
     display: block;
     text-align: left;
 }
+.right {
+    display: block;
+    text-align: right;
+    margin: 0;
+}
 .section{
     margin: 10px 10%;
     padding: 20px;
     border: 1px solid black;
     background-color: lightblue;
+}
+.formButton {
+    background-color: coral;
+    border: 2px solid black;
+    border-right-color: yellow;
+    border-bottom-color: yellow;
+
+}
+.formElement {
+    float:left;
+    display: block;
+    width: 300px;
 }
